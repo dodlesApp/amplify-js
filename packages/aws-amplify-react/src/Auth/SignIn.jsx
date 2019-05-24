@@ -67,7 +67,7 @@ export default class SignIn extends AuthPiece {
 
     async signIn(event) {
         // avoid submitting the form
-        event.preventDefault();
+        if(event) event.preventDefault();
 
         const username = this.getUsernameFromInput() || '';
         const password = this.inputs.password;
